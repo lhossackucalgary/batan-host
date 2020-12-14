@@ -74,7 +74,7 @@ export default {
     sockets: [
       {
         name: 'client-socket',
-        url: 'http://localhost:3001',
+        url: 'http://ec2-3-82-46-179.compute-1.amazonaws.com:3001',
         default: true,
         vuex: {
           mutations: [

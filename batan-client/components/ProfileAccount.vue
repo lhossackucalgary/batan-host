@@ -42,7 +42,7 @@ export default Vue.extend({
             this.$data.showOverlay = true;
         },
         deleteAccountInformation() {
-            this.$axios.post('http://localhost:3001/api/profile/delete-profile').then((response) => {
+            this.$axios.post('http://ec2-3-82-46-179.compute-1.amazonaws.com:3001/api/profile/delete-profile').then((response) => {
                 console.log(response);
             })
         }

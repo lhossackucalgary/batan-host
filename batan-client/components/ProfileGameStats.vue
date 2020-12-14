@@ -48,7 +48,7 @@ export default Vue.extend({
    },
    methods: {
     getData() {
-        this.$axios.get('http://localhost:3001/api/profile/info').then((response) => {
+        this.$axios.get('http://ec2-3-82-46-179.compute-1.amazonaws.com:3001/api/profile/info').then((response) => {
             if(response.data === ""){
                 const user = {
                     firstName: this.$auth.user.given_name,
@@ -57,7 +57,7 @@ export default Vue.extend({
                     email: this.$auth.user.email,
                 };
                 console.log(user);
-                this.$axios.post('http://localhost:3001/api/profile/create', user).then((response) => {
+                this.$axios.post('http://ec2-3-82-46-179.compute-1.amazonaws.com:3001/api/profile/create', user).then((response) => {
                     console.log(response.data);
                     this.$data.playerStats = response.data;
                 });
