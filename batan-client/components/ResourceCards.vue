@@ -205,6 +205,7 @@ export default Vue.extend({
         console.log("we are in fact trading");
         if (this.selectedFromSelf) {
           console.log("looks like we can trade now!");
+          //@ts-ignore cursed
             this.$root.socket.emit('game/tradeBank', {
               game_id: this.$store.state.games.active_game.game_id,
               to_bank: Number(this.selectedFromSelf),
@@ -213,6 +214,7 @@ export default Vue.extend({
           this.selectedFromSelf = null;
         }
         else{
+          //@ts-ignore cursed
           this.selectedFromSelf = 5;
         }
       }
@@ -223,6 +225,7 @@ export default Vue.extend({
         console.log("we are in fact trading");
         if (this.selectedFromSelf) {
           console.log("looks like we can trade now!");
+          //@ts-ignore cursed
             this.$root.socket.emit('game/tradeBank', {
               game_id: this.$store.state.games.active_game.game_id,
               to_bank: Number(this.selectedFromSelf),
@@ -231,6 +234,7 @@ export default Vue.extend({
       this.selectedFromSelf = null;
         }
         else{
+          //@ts-ignore cursed
           this.selectedFromSelf = 3;
         }
       }
@@ -241,6 +245,7 @@ export default Vue.extend({
         console.log("we are in fact trading");
         if (this.selectedFromSelf) {
           console.log("looks like we can trade now!");
+          //@ts-ignore cursed
             this.$root.socket.emit('game/tradeBank', {
               game_id: this.$store.state.games.active_game.game_id,
               to_bank: Number(this.selectedFromSelf),
@@ -249,6 +254,7 @@ export default Vue.extend({
           this.selectedFromSelf = null;
         }
         else{
+          //@ts-ignore cursed
           this.selectedFromSelf = 1;
         }
       }
@@ -259,6 +265,7 @@ export default Vue.extend({
         console.log("we are in fact trading");
         if (this.selectedFromSelf) {
           console.log("looks like we can trade now!");
+          //@ts-ignore cursed
             this.$root.socket.emit('game/tradeBank', {
               game_id: this.$store.state.games.active_game.game_id,
               to_bank: Number(this.selectedFromSelf),
@@ -267,6 +274,7 @@ export default Vue.extend({
           this.selectedFromSelf = null;
         }
         else{
+          //@ts-ignore cursed
           this.selectedFromSelf = 2;
         }
       }
@@ -277,6 +285,7 @@ export default Vue.extend({
         console.log("we are in fact trading");
         if (this.selectedFromSelf) {
           console.log("looks like we can trade now!");
+          //@ts-ignore cursed
             this.$root.socket.emit('game/tradeBank', {
               game_id: this.$store.state.games.active_game.game_id,
               to_bank: Number(this.selectedFromSelf),
@@ -285,6 +294,7 @@ export default Vue.extend({
           this.selectedFromSelf = null;
         }
         else{
+          //@ts-ignore cursed
           this.selectedFromSelf = 4;
         }
       }

@@ -7,10 +7,13 @@
 <script lang="ts">
 export default {
   name: "Logout",
+  //@ts-ignore cursed
   auth: false,
   components: {},
   created() {
+    //@ts-ignore cursed
     if (!this.$auth.loggedIn) {
+      //@ts-ignore cursed
       this.$router.push({
         path: '/'
       });

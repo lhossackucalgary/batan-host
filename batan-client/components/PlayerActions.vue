@@ -63,6 +63,7 @@ export default Vue.extend({
 
     endTurn(): void{
         console.log("ending turn");
+        //@ts-ignore cursed
         this.$root.socket.emit('game/endTurn', {game_id: this.$store.state.games.active_game.game_id});
     }
   },

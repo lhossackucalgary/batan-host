@@ -49,6 +49,7 @@ export default Vue.extend({
     }
   },
   created() {
+    //@ts-ignore cursed
     if (!this.$auth.loggedIn) {
       this.$router.push({
         path: '/'

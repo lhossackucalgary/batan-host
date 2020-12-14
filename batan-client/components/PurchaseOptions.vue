@@ -64,9 +64,11 @@ export default Vue.extend({
   },
 
   created() {
+    //@ts-ignore cursed
     this.$nuxt.$on('settlement/placeSettlement', (vertex) => {
       if (this.buildingSettlement) {
         console.log("Zach wants to build a settlement at " + vertex);
+        //@ts-ignore cursed
         this.$root.socket.emit('game/playInitPlaceSettle', {
           game_id: this.$store.state.games.active_game.game_id,
           settlement: Number(vertex)
@@ -74,11 +76,12 @@ export default Vue.extend({
       }
       this.clear()
     })
-
+    //@ts-ignore cursed
     this.$nuxt.$on('road/placeRoad', (roadStartAndEnd) => {
       if (this.buildingRoad) {
         console.log("Zach wants to build a road at " + roadStartAndEnd.start + " and " + roadStartAndEnd.end);
         console.log("Sum of these = " + (Number(roadStartAndEnd.start) + Number(roadStartAndEnd.end)));
+        //@ts-ignore cursed
         this.$root.socket.emit('game/playInitPlaceRoad', {
           game_id: this.$store.state.games.active_game.game_id,
           start: Number(roadStartAndEnd.start),
@@ -87,9 +90,10 @@ export default Vue.extend({
       }
       this.clear()
     })
-
+    //@ts-ignore cursed
     this.$nuxt.$on('settlement/buySettlement', (vertex) => {
       if (this.buildingSettlement) {
+        //@ts-ignore cursed
         this.$root.socket.emit('game/buySettlement', {
           game_id: this.$store.state.games.active_game.game_id,
           location: Number(vertex),
@@ -97,9 +101,10 @@ export default Vue.extend({
       }
       this.clear()
     })
-
+    //@ts-ignore cursed
     this.$nuxt.$on('road/buyRoad', (roadStartAndEnd) => {
       if (this.buildingRoad) {
+        //@ts-ignore cursed
         this.$root.socket.emit('game/buyRoad', {
           game_id: this.$store.state.games.active_game.game_id,
           start: Number(roadStartAndEnd.start),
@@ -108,9 +113,10 @@ export default Vue.extend({
       }
       this.clear()
     })
-
+    //@ts-ignore cursed
     this.$nuxt.$on('settlement/buyCity', (vertex) => {
       if (this.buildingCity) {
+        //@ts-ignore cursed
         this.$root.socket.emit('game/buyCity', {
           game_id: this.$store.state.games.active_game.game_id,
           location: Number(vertex),
